@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Shrihari Dumbre</title>
+  <meta name="description" content="Projects by Shrihari Dumbre — Deep Learning, Computer Vision, Systems." />
+  <meta name="theme-color" content="#0e0e11" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+  <a href="index.html" class="logo">SD</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="publications.html">Publications</a></li>
+  </ul>
+  <button class="menu-btn" id="menu-btn">☰</button>
+</nav>
+
+<div class="page">
+
+  <section id="hero" style="padding-bottom: 3rem;">
+    <div class="fade-up">
+      <div class="label">Projects</div>
+      <h1>Things I've <span class="accent">Built</span></h1>
+      <p class="subtitle">A collection of research implementations, course projects, and personal explorations.</p>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="projects-grid">
+
+      <!-- PROJECT 1 — Replace href="#" with your GitHub link -->
+      <a href="#" target="_blank" rel="noopener" class="project-card fade-up">
+        <span class="arrow">↗</span>
+        <h3>Masked Autoencoder for Self-Supervised Image Representation Learning</h3>
+        <div class="context">Personal Project</div>
+        <p>MAE architecture with a Vision Transformer encoder. Trained on CIFAR-10 with 75% masking, achieving 61.25% linear probing and 50.4% kNN accuracy.</p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">ViT</span>
+          <span class="tag">Self-Supervised</span>
+        </div>
+      </a>
+
+      <!-- PROJECT 2 — Replace href="#" with your GitHub link -->
+      <a href="#" target="_blank" rel="noopener" class="project-card fade-up">
+        <span class="arrow">↗</span>
+        <h3>Low-Rank Multimodal Fusion for Gastric Histopathology</h3>
+        <div class="context">Under Dr. Bikash Santra</div>
+        <p>Multimodal pipeline fusing ResNet-50 and Sentence-Transformer features. 89.8% accuracy on PatchGastricADC22 using LMF with Attention Pooling.</p>
+        <div class="tags">
+          <span class="tag">PyTorch</span>
+          <span class="tag">Multimodal</span>
+          <span class="tag">Attention</span>
+          <span class="tag">CV</span>
+        </div>
+      </a>
+
+      <!-- PROJECT 3 — Replace href="#" with your GitHub link -->
+      <a href="#" target="_blank" rel="noopener" class="project-card fade-up">
+        <span class="arrow">↗</span>
+        <h3>In-Memory Graph Based Database</h3>
+        <div class="context">Under Dr. Dip Sankar Banerjee</div>
+        <p>Neo4j-inspired graph DB from scratch with adjacency lists, hash maps, and custom indexing. 20+ operations with O(1) node retrieval and a Python GUI.</p>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">Python</span>
+          <span class="tag">DSA</span>
+          <span class="tag">Graph Theory</span>
+        </div>
+      </a>
+
+      <!-- PROJECT 4 — Replace href="#" with your GitHub link -->
+      <a href="#" target="_blank" rel="noopener" class="project-card fade-up">
+        <span class="arrow">↗</span>
+        <h3>PositionNet for Massive MIMO-OTFS Channel Estimation</h3>
+        <div class="context">Research Implementation</div>
+        <p>PositionNet (~3800 params) for MIMO-OTFS channel estimation. Full pipeline on EVA channel model in TensorFlow/Keras with Top-K accuracy evaluation.</p>
+        <div class="tags">
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Signal Processing</span>
+          <span class="tag">Wireless</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>© 2026 Shrihari Dumbre</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -59,6 +59,7 @@ nav {
   font-size: 1.15rem;
   color: var(--accent);
   letter-spacing: -0.5px;
+  text-decoration: none;
 }
 
 .nav-links {
