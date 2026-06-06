@@ -419,6 +419,77 @@ footer {
   border-color: rgba(37, 99, 235, 0.3);
 }
 
+/* Technical Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.skill-category {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: var(--bg);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.skill-category:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+  transform: translateY(-3px);
+}
+
+[data-theme="dark"] .skill-category:hover {
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.1);
+}
+
+.skill-category-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-category-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--bg);
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skill-pill:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+[data-theme="dark"] .skill-pill:hover {
+  background: rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
 /* Hero Layout & Photo Slot */
 .happy-name {
   color: var(--text);
@@ -510,6 +581,9 @@ footer {
     align-items: flex-start;
   }
   .research-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 }
