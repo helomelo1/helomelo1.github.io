@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First Blog Post - Shrihari Dumbre</title>
+  <meta name="description" content="A sample blog post to demonstrate how to write and publish blogs on my website." />
+  <meta name="theme-color" content="#f3f4f6" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>SD</text></svg>" />
+  <link rel="stylesheet" href="../style.css?v=3" />
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <a href="../index.html" class="logo">SD</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="../blogs.html" class="active">Blog</a></li>
+      <li>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <article class="blog-article">
+      <!-- Back link -->
+      <a href="../blogs.html" class="blog-back-link">← Back to all posts</a>
+
+      <!-- Article Header -->
+      <header class="blog-article-header">
+        <h1>My First Blog Post</h1>
+        <div class="blog-article-meta">
+          <time datetime="2026-06-18">June 18, 2026</time>
+          <span class="blog-meta-sep">·</span>
+          <span>5 min read</span>
+        </div>
+        <div class="blog-article-tags">
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Tutorial</span>
+        </div>
+      </header>
+
+      <!-- Article Content — Write your blog here! -->
+      <div class="blog-content">
+        <p>
+          This is a sample blog post to show you how the blog system works. 
+          You can write your posts using plain HTML — just copy this file, 
+          rename it, and start writing. It's that simple.
+        </p>
+
+        <h2>How to Write a New Blog Post</h2>
+        <p>
+          Follow these steps to publish a new blog:
+        </p>
+        <ol>
+          <li><strong>Copy this file</strong> — Duplicate <code>sample-post.html</code> and rename it (e.g., <code>my-new-post.html</code>)</li>
+          <li><strong>Update the title</strong> — Change the <code>&lt;title&gt;</code> tag and the <code>&lt;h1&gt;</code></li>
+          <li><strong>Update the metadata</strong> — Set the date, reading time, and tags</li>
+          <li><strong>Write your content</strong> — Replace this section with your blog content</li>
+          <li><strong>Add it to the listing</strong> — Add a card entry in <code>blogs.html</code></li>
+        </ol>
+
+        <h2>Formatting Examples</h2>
+        
+        <h3>Code Blocks</h3>
+        <p>You can include code with syntax highlighting:</p>
+        <pre><code>import torch
+import torch.nn as nn
+
+class SimpleNet(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(input_dim, hidden_dim),
+            nn.ReLU(),
+            nn.Linear(hidden_dim, output_dim)
+        )
+    
+    def forward(self, x):
+        return self.net(x)</code></pre>
+
+        <p>Or use inline code like <code>model.train()</code> within a sentence.</p>
+
+        <h3>Blockquotes</h3>
+        <blockquote>
+          <p>"The best way to predict the future is to invent it." — Alan Kay</p>
+        </blockquote>
+
+        <h3>Images</h3>
+        <p>Add images by placing them in the <code>assets/blog/</code> folder:</p>
+        <!-- <img src="../assets/blog/my-image.png" alt="Description of image" /> -->
+        <p><em>(Uncomment the line above and replace with your image path)</em></p>
+
+        <h3>Lists</h3>
+        <ul>
+          <li>Unordered list item one</li>
+          <li>Unordered list item two</li>
+          <li>Unordered list item three</li>
+        </ul>
+
+        <h3>Emphasis & Formatting</h3>
+        <p>
+          You can use <strong>bold text</strong>, <em>italic text</em>, 
+          and <a href="https://example.com">hyperlinks</a>. You can also use
+          <mark>highlighted text</mark> to draw attention.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+          That's it! Writing a blog post is as easy as editing HTML. 
+          No build tools, no markdown parsers, no databases — just you, 
+          your code editor, and your thoughts.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Shrihari Dumbre</p>
+  </footer>
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>

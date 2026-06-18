@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Shrihari Dumbre</title>
+  <meta name="description" content="Blog posts by Shrihari Dumbre on machine learning, research, and engineering." />
+  <meta name="theme-color" content="#f3f4f6" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>SD</text></svg>" />
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+
+<div class="container">
+  <nav>
+    <a href="index.html" class="logo">SD</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="blogs.html" class="active">Blog</a></li>
+      <li>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h1>Blog</h1>
+      <p class="subtitle">Thoughts on machine learning, research, and whatever else I find interesting.</p>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         HOW TO ADD A NEW BLOG POST:
+         
+         1. Copy an existing post in the blog/ folder (e.g. blog/sample-post.html)
+         2. Rename it (e.g. blog/my-new-post.html)
+         3. Edit the content inside the new file
+         4. Add a new card below by copying the <a class="blog-card"> block
+         5. Update the href, title, description, date, reading time, and tags
+         6. Push to GitHub — done!
+         
+         Posts are listed newest-first. Just add new cards at the top.
+    ═══════════════════════════════════════════════════════ -->
+
+    <section class="blog-list">
+
+      <!-- ─── Blog Post Card ─── -->
+      <a href="blog/sample-post.html" class="blog-card" id="blog-sample-post">
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <time datetime="2026-06-18">June 18, 2026</time>
+            <span class="blog-meta-sep">·</span>
+            <span>5 min read</span>
+          </div>
+          <h2 class="blog-card-title">My First Blog Post</h2>
+          <p class="blog-card-excerpt">
+            A sample blog post to demonstrate the blog system. Learn how to create 
+            new posts, format code blocks, add images, and more.
+          </p>
+          <div class="blog-card-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Tutorial</span>
+          </div>
+        </div>
+        <div class="blog-card-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- ─── Template: Copy this block to add a new post ───
+      <a href="blog/YOUR-POST-FILENAME.html" class="blog-card" id="blog-your-post-id">
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <time datetime="YYYY-MM-DD">Month DD, YYYY</time>
+            <span class="blog-meta-sep">·</span>
+            <span>X min read</span>
+          </div>
+          <h2 class="blog-card-title">Your Post Title</h2>
+          <p class="blog-card-excerpt">
+            A brief 1-2 sentence description of what this post is about.
+          </p>
+          <div class="blog-card-tags">
+            <span class="tag">Tag1</span>
+            <span class="tag">Tag2</span>
+          </div>
+        </div>
+        <div class="blog-card-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+      ─── End Template ─── -->
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Shrihari Dumbre</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
