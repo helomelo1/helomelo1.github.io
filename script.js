@@ -93,15 +93,15 @@ async function loadNotes() {
       });
 
       html += `
-        <div class="note-card">
+        <a href="notes/${note.filename}" target="_blank" rel="noopener" class="note-card" style="display: block; text-decoration: none; color: inherit;">
           <div class="note-meta">
             <time>${dateStr}</time>
           </div>
-          <h3 class="note-title">${note.title}</h3>
-          <p class="note-body">
-            ${note.content.replace(/\n/g, '<br>')}
-          </p>
-        </div>
+          <h3 class="note-title" style="margin-bottom: 0;">${note.title}</h3>
+          <div class="note-body" style="margin-top: 0.5rem; color: var(--accent);">
+            View PDF &rarr;
+          </div>
+        </a>
       `;
     });
 
