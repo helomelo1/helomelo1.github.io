@@ -73,3 +73,42 @@ if (sections.length > 0) {
   window.addEventListener('scroll', updateActiveNav, { passive: true });
   updateActiveNav();
 }
+
+// ── Dynamic Notes ──
+async function loadNotes() {
+  const notesList = document.getElementById('dynamic-notes-list');
+  if (!notesList) return;
+
+  try {
+    const res = await fetch('notes.json');
+    if (!res.ok) return; // Keep default placeholder if notes.json is missing
+
+    const notes = await res.json();
+    if (notes.length === 0) return; // Keep default placeholder if empty
+
+    let html = '';
+    notes.forEach(note => {
+      const dateStr = new Date(note.date * 1000).toLocaleDateString('en-US', {
+        month: 'long', day: 'numeric', year: 'numeric'
+      });
+
+      html += `
+        <div class="note-card">
+          <div class="note-meta">
+            <time>${dateStr}</time>
+          </div>
+          <h3 class="note-title">${note.title}</h3>
+          <p class="note-body">
+            ${note.content.replace(/\n/g, '<br>')}
+          </p>
+        </div>
+      `;
+    });
+
+    notesList.innerHTML = html;
+  } catch (err) {
+    console.error('Failed to load notes:', err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadNotes);
