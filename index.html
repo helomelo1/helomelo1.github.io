@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shrihari Dumbre - AI/ML Engineer</title>
   <meta name="description" content="Shrihari Dumbre - Machine Learning Engineer & Researcher." />
-  <meta name="theme-color" content="#f3f4f6" />
+  <meta name="theme-color" content="#f5f0e8" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>SD</text></svg>" />
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
 
 <div class="container">
   <nav>
-    <a href="index.html" class="logo">SD</a>
+    <a href="#hero" class="logo">SD</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="blogs.html">Blog</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#notes">Notes</a></li>
       <li>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
           <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -33,7 +37,8 @@
   </nav>
 
   <main>
-    <section id="hero">
+    <!-- ═══ Hero ═══ -->
+    <section id="hero" data-animate>
       <div class="hero-layout">
         <div class="hero-text">
           <h1><span class="happy-name">Shrihari Dumbre</span></h1>
@@ -42,11 +47,9 @@
           
           <div class="hero-links">
             <a href="https://github.com/helomelo1" target="_blank" rel="noopener">GitHub</a>
-            <span class="sep">/</span>
             <a href="https://linkedin.com/in/shrihari-dumbre" target="_blank" rel="noopener">LinkedIn</a>
-            <span class="sep">/</span>
+            <a href="https://x.com/shriharimd" target="_blank" rel="noopener">Twitter</a>
             <a href="mailto:shriharidumbre16@gmail.com">Email</a>
-            <span class="sep">/</span>
             <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
           </div>
         </div>
@@ -64,17 +67,19 @@
       </div>
     </section>
 
-    <section id="about">
+    <!-- ═══ About ═══ -->
+    <section id="about" data-animate>
       <h2>About Me</h2>
       <p>
-        I’m interested in problems that are just structured enough to be solvable and just unpredictable enough to stay interesting, especially in machine learning and related areas. I spend a fair amount of time working with models that don’t always cooperate, trying to get them to do something useful anyway. Somewhere between debugging, experimenting, and convincing myself that the next run will finally converge, I’ve developed a preference for challenges that reward persistence more than elegance. It’s less of a hobby and more an ongoing negotiation with complexity, and I tend to stick with it until it gives in.
+        I'm interested in problems that are just structured enough to be solvable and just unpredictable enough to stay interesting — especially in machine learning and related areas. I spend a fair amount of time working with models that don't always cooperate, trying to get them to do something useful anyway. Somewhere between debugging, experimenting, and convincing myself that the next run will finally converge, I've developed a preference for challenges that reward persistence more than elegance. It's less of a hobby and more an ongoing negotiation with complexity, and I tend to stick with it until it gives in.
       </p>
     </section>
 
-    <section id="skills">
+    <!-- ═══ Skills ═══ -->
+    <section id="skills" data-animate>
       <h2>Technical Skills</h2>
 
-      <div class="skills-grid">
+      <div class="skills-grid" data-animate-stagger>
         <div class="skill-category">
           <h3 class="skill-category-title">
             <span class="skill-category-icon">💻</span>
@@ -118,7 +123,8 @@
       </div>
     </section>
 
-    <section id="experience">
+    <!-- ═══ Experience ═══ -->
+    <section id="experience" data-animate>
       <h2>Experience</h2>
 
       <div class="exp-card">
@@ -157,10 +163,11 @@
       </div>
     </section>
 
-    <section id="research-interests">
+    <!-- ═══ Research Interests ═══ -->
+    <section id="research-interests" data-animate>
       <h2>Research Interests</h2>
 
-      <div class="research-grid">
+      <div class="research-grid" data-animate-stagger>
         <div class="research-card">
           <div class="research-icon">🔄</div>
           <h3>Class Incremental Learning</h3>
@@ -179,13 +186,171 @@
           <div class="research-icon">⚡</div>
           <h3>Scaling for LLMs</h3>
           <p>Interested in the systems and algorithmic challenges behind training and serving large language models efficiently.</p>
-          <span class="research-status exploring">Looking to Explore</span>
+          <span class="research-status active">Currently Learning</span>
         </div>
       </div>
     </section>
+
+    <!-- ═══ Projects ═══ -->
+    <section id="projects" data-animate>
+      <h2>Projects</h2>
+      <p class="subtitle" style="margin-top: -0.5rem;">A collection of research implementations, course projects, and personal explorations.</p>
+
+      <div class="project-list" data-animate-stagger>
+        <a href="https://github.com/helomelo1/slm-with-MoE" target="_blank" rel="noopener" class="project-item">
+          <h3>SLM-MoE: Small Language Model with Sparse Mixture of Experts</h3>
+          <p>Custom 12M parameter Sparse MoE decoder-only Transformer built from scratch. Features auxiliary load-balancing loss and trained on the TinyStories dataset.</p>
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">NLP</span>
+            <span class="tag">MoE</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/helomelo1/self-supervised-representation-learning-using-MAE" target="_blank" rel="noopener" class="project-item">
+          <h3>Masked Autoencoder for Self-Supervised Image Representation Learning</h3>
+          <p>MAE architecture with a Vision Transformer encoder. Trained on CIFAR-10 with 75% masking, achieving 61.25% linear probing and 50.4% kNN accuracy.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">ViT</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/helomelo1/Low-Rank-Multimodal-Fusion-on-PatchGastricADC22" target="_blank" rel="noopener" class="project-item">
+          <h3>Low-Rank Multimodal Fusion for Gastric Histopathology</h3>
+          <p>Multimodal pipeline fusing ResNet-50 and Sentence-Transformer features. 89.8% accuracy on PatchGastricADC22 using LMF with Attention Pooling.</p>
+          <div class="tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">Multimodal</span>
+            <span class="tag">Attention</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/helomelo1/In-Memory-Graph-Based-Database" target="_blank" rel="noopener" class="project-item">
+          <h3>In-Memory Graph Based Database</h3>
+          <p>Neo4j-inspired graph DB from scratch with adjacency lists, hash maps, and custom indexing. 20+ operations with O(1) node retrieval and a Python GUI.</p>
+          <div class="tags">
+            <span class="tag">C++</span>
+            <span class="tag">Python</span>
+            <span class="tag">DSA</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/helomelo1/DeepMIMO-OTFS-ChannelEstimation" target="_blank" rel="noopener" class="project-item">
+          <h3>PositionNet for Massive MIMO-OTFS Channel Estimation</h3>
+          <p>PositionNet (~3800 params) for MIMO-OTFS channel estimation. Full pipeline on EVA channel model in TensorFlow/Keras with Top-K accuracy evaluation.</p>
+          <div class="tags">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Signal Processing</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ Publications ═══ -->
+    <section id="publications" data-animate>
+      <h2>Publications</h2>
+      <p class="subtitle">In Progress... :)</p>
+    </section>
+
+    <!-- ═══ Blog ═══ -->
+    <section id="blog" data-animate>
+      <h2>Blog</h2>
+      <p class="subtitle">Longer-form writing on things I'm learning and building.</p>
+
+      <!-- ═══════════════════════════════════════════════════════
+           HOW TO ADD A NEW BLOG POST:
+           
+           1. Copy an existing post in the blog/ folder (e.g. blog/sample-post.html)
+           2. Rename it (e.g. blog/my-new-post.html)
+           3. Edit the content inside the new file
+           4. Add a new card below by copying the <a class="blog-card"> block
+           5. Update the href, title, description, date, reading time, and tags
+           6. Push to GitHub — done!
+           
+           Posts are listed newest-first. Just add new cards at the top.
+      ═══════════════════════════════════════════════════════ -->
+
+      <div class="blog-list">
+
+        <!-- ─── Blog Post Card ─── -->
+        <!-- <a href="blog/sample-post.html" class="blog-card" id="blog-sample-post">
+          <div class="blog-card-content">
+            <div class="blog-card-meta">
+              <time datetime="2026-06-18">June 18, 2026</time>
+              <span class="blog-meta-sep">·</span>
+              <span>5 min read</span>
+            </div>
+            <h2 class="blog-card-title">My First Blog Post</h2>
+            <p class="blog-card-excerpt">
+              A sample blog post to demonstrate the blog system. Learn how to create 
+              new posts, format code blocks, add images, and more.
+            </p>
+            <div class="blog-card-tags">
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Tutorial</span>
+            </div>
+          </div>
+          <div class="blog-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a> -->
+
+        <div class="notes-empty">
+          <p>Coming soon — first post is in the works.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ Notes ═══ -->
+    <section id="notes" data-animate>
+      <h2>Notes</h2>
+      <p class="subtitle">Thoughts on machine learning, research, and whatever else I find interesting.</p>
+
+      <div class="notes-list">
+
+        <!-- ─── How to add a note ───
+        Copy the block below, fill in the details, and paste it here.
+        Newest notes go at the top.
+
+        <div class="note-card">
+          <div class="note-meta">
+            <time datetime="YYYY-MM-DD">Month DD, YYYY</time>
+          </div>
+          <h3 class="note-title">Your Note Title</h3>
+          <p class="note-body">
+            Your note content goes here. Can be a few sentences or a few paragraphs.
+          </p>
+          <div class="note-tags">
+            <span class="tag">Tag1</span>
+            <span class="tag">Tag2</span>
+          </div>
+        </div>
+        ─── End template ─── -->
+
+        <div class="notes-empty">
+          <p>Nothing here yet — stay tuned.</p>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
+    <div class="footer-links">
+      <a href="https://github.com/helomelo1" target="_blank" rel="noopener">GitHub</a>
+      <span class="footer-sep">·</span>
+      <a href="https://linkedin.com/in/shrihari-dumbre" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <a href="https://x.com/shriharimd" target="_blank" rel="noopener">Twitter</a>
+      <span class="footer-sep">·</span>
+      <a href="mailto:shriharidumbre16@gmail.com">Email</a>
+    </div>
     <p>© 2026 Shrihari Dumbre</p>
   </footer>
 </div>
